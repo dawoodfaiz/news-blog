@@ -27,6 +27,12 @@ class Abstract_model extends CI_Model{
 
   }
 
+  public function save($data){
+
+    $this->db->insert($this->table_name, $data);
+    return $this->db->insert_id();
+  }
+
 }
 
 ?>

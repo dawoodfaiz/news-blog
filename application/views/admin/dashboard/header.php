@@ -7,7 +7,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="description" content="">
     <title>Admin Dashboard</title>
+    <base href="<?php echo base_url(); ?>">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script>
+      var base_url = '<?php echo base_url(); ?>'
+    </script>
     <link href="./assets/css/bootstrap.min.css" rel="stylesheet">
 
     <style>
@@ -39,7 +43,7 @@
       <input class="form-control form-control-dark w-100" type="text" placeholder="Search" aria-label="Search">
       <ul class="navbar-nav px-3">
         <li class="nav-item text-nowrap">
-          <a class="nav-link logout" href="<?php echo base_url('processAdminLogout'); ?>">Sign out</a>
+          <a class="nav-link logout" href="<?php echo base_url('admin-logout'); ?>">Sign out</a>
         </li>
       </ul>
     </nav>
@@ -56,13 +60,13 @@
                 </a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="<?php echo base_url('viewBlogPosts'); ?>">
+                <a class="nav-link" href="<?php echo base_url('add-blog'); ?>">
                   <span data-feather="plus-square"></span>
                   Add Blog Post
                 </a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="#">
+                <a class="nav-link" href="<?php echo base_url('view-blogs'); ?>">
                   <span data-feather="eye"></span>
                   View Blog Posts
                 </a>

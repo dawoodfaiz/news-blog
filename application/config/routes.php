@@ -51,10 +51,11 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 */
 $route['default_controller'] = 'welcome';
 $route['admin'] = 'admin/admin';
-$route['addBlogPost'] = 'admin/blog_posts/addBlogPost';
-$route['viewBlogPosts'] = 'admin/blog_posts/index';
+$route['add-blog'] = 'admin/blog_posts/add_blog_post';
+$route['process-add-blog'] = 'admin/blog_posts/process_add_blog_post';
+$route['view-blogs'] = 'admin/blog_posts/view_blog_posts';
 $route['dashboard'] = 'admin/admin/dashboard';
-$route['processAdminLogin'] = 'admin/admin/processAdminLogin';
-$route['processAdminLogout'] = 'admin/admin/processAdminLogout';
+$route['admin-login'] = 'admin/admin/admin_login_process';
+$route['admin-logout'] = 'admin/admin/admin_logout_process';
 $route['404_override'] = '';
 $route['translate_uri_dashes'] = FALSE;

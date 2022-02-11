@@ -6,7 +6,7 @@ $(document).ready(function () {
     $('.all_errors').empty();
     $('.direct_access_error').hide();
     $.ajax({
-      url: base_url + "processAdminLogin",
+      url: base_url + "admin-login",
       data: formObj.serializeArray(),
       type: "POST",
       dataType: "JSON",

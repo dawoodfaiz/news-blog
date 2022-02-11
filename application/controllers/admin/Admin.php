@@ -47,7 +47,7 @@ class Admin extends CI_Controller{
 
   }
 
-  public function processAdminLogin(){
+  public function admin_login_process(){
 
     $data = [];
     $data['response'] = false;
@@ -99,7 +99,7 @@ class Admin extends CI_Controller{
 
   }
 
-  public function processAdminLogout(){
+  public function admin_logout_process(){
     
     $this->session->sess_destroy();
     redirect('admin');
