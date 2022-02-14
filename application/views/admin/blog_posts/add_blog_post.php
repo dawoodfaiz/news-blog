@@ -1,7 +1,7 @@
 <?php $this->load->view('admin/dashboard/header'); ?>
 
     <main role="main" class="col-md-9 ml-sm-auto col-lg-10 px-md-4">
-      <h2>Add a Blog Post </h2>
+      <h2 class="blog-title">Add a Blog Post </h2>
 
       <form id="add-blog" enctype="multipart/form-data">
     		    
@@ -13,8 +13,18 @@
 
         <div class="form-group">
             <label for="description">Description:</label>
-            <textarea type="text" class="form-control" name="description"></textarea>
+            <textarea type="text" class="form-control" name="description" id="description"></textarea>
         </div>
+        <script>
+          ClassicEditor
+            .create( document.querySelector( '#description' ) )
+            .then( editor => {
+                    console.log( editor );
+            } )
+            .catch( error => {
+                    console.error( error );
+            } );
+        </script>
         <div class="description_error all_errors"></div>
 
 

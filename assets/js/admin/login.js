@@ -15,7 +15,6 @@ $(document).ready(function () {
           location.href = base_url + data.redirect_url;
         } else if (data.errors) {
           errors(data.errors);
-        } else {
           $('.password_error').html(data.password_error);
         }
       }

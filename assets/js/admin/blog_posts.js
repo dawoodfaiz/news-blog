@@ -12,26 +12,29 @@ $(document).ready(function () {
       contentType: false,
       processData: false,
       success: function (data) {
-        console.log(data.errors);
         if (data.response == true) {
           formObj.trigger('reset');
-          swal("Congratulations!", "Blog Post Added Successfully!", "success");
+          swal({
+            title: "Congratulations!",
+            text: data.success,
+            icon: "success",
+            button: "OK!",
+          }).then((value) => {
+            location.reload();
+          });
         } else {
           errors(data.errors);
-          if (data.image_errors) {
-            $('.image_error').value(data.image_errors);
-          }
+          $('.image_error').html(data.image_errors);
         }
       }
-
     });
   });
 
   function errors(errors = '') {
     $.each(errors, function (key, value) {
       $('.' + key + '_error').html(value);
-      return false;
     });
+    return false;
   }
 
 });

@@ -9,12 +9,25 @@
     <title>Admin Dashboard</title>
     <base href="<?php echo base_url(); ?>">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://cdn.ckeditor.com/ckeditor5/32.0.0/classic/ckeditor.js"></script>
     <script>
       var base_url = '<?php echo base_url(); ?>'
     </script>
     <link href="./assets/css/bootstrap.min.css" rel="stylesheet">
 
     <style>
+
+      .blog-title {
+        background-color: #333;
+        color: #fff;
+        padding: 10px;
+        margin: 10px;
+        text-align: center;
+      }
+
+      .all_errors {
+        color: red;
+      }
       .bd-placeholder-img {
         font-size: 1.125rem;
         text-anchor: middle;
